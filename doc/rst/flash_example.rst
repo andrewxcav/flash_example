@@ -1,5 +1,5 @@
 ##############################
-AN0xxxx: app_note_title
+FLASH_EXAMPLE: Simple program that checks for the existence of flash, with IO over UART
 ##############################
 
 ************
@@ -63,13 +63,13 @@ Special attention should be paid to the section on
 The application is built using the `xcommon-cmake <https://www.xmos.com/file/xcommon-cmake-documentation/?version=latest>`_
 build system, which is provided with the XTC tools and is based on `CMake <https://cmake.org/>`_.
 
-The ``an0xxxx`` software ZIP package should be downloaded and extracted to a chosen working
+The ``flash_example`` software ZIP package should be downloaded and extracted to a chosen working
 directory.
 
 To configure the build, the following commands should be run from an XTC command prompt::
 
-    cd an0xxxx
-    cd app_an0xxxx
+    cd flash_example
+    cd app_flash_example
     cmake -G "Unix Makefiles" -B build
 
 All required dependencies are included in the software package. If any dependencies are missing,
@@ -80,7 +80,7 @@ The application binaries should then be built using ``xmake``::
     xmake -j -C build
 
 Binary artifacts (.xe files) will be generated under the appropriate subdirectories of the
-``app_an0xxxx/bin`` directory — one for each supported build configuration.
+``app_flash_example/bin`` directory — one for each supported build configuration.
 
 For subsequent builds, the ``cmake`` step may be omitted.
 If ``CMakeLists.txt`` or other build files are modified, ``cmake`` will be re-run automatically
@@ -89,12 +89,12 @@ by ``xmake`` as needed.
 Running the example
 ===================
 
-From an XTC command prompt, the following command should be run from the ``an0xxxx/app_an0xxxx``
+From an XTC command prompt, the following command should be run from the ``flash_example/app_flash_example``
 directory::
 
-    xrun ./bin/app_an0xxxx.xe
+    xrun ./bin/app_flash_example.xe
 
 Alternatively, the application can be programmed into flash memory for standalone execution::
 
-    xflash ./bin/app_an0xxxx.xe
+    xflash ./bin/app_flash_example.xe
 

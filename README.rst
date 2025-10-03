@@ -1,7 +1,7 @@
 :orphan:
 
 #######################
-AN0XXXX: app_note_title
+AN0XXXX: Simple program that checks for the existence of flash, with IO over UART
 #######################
 
 :vendor: XMOS
@@ -12,21 +12,6 @@ AN0XXXX: app_note_title
 :keywords: <LIST OF KEYWORDS HERE>
 :hardware: <LIST OF SUPPORTED BOARDS HERE>
 
-HOW TO USE THIS TEMPLATE:
-
-⚠️ DO NOT FORK THIS REPO!
-
-#. Click "Use this template" ⬆️
-
-#. Set owner to your username
-
-#. Enter an app note number and description (should match the title) and click "Create repository"
-
-#. A github action will run in the new repo to customise/rename files and tidy up
-
-#. Transfer ownership of the new repo to the xmosnotes organisation (via the "Settings" tab)
-
-THIS MESSAGE WILL SELF DESTRUCT IN THE NEW REPO
 
 *******
 Summary

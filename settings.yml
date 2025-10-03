@@ -1,18 +1,18 @@
 # This file relates to internal XMOS infrastructure and should be ignored by external users
 
-an_number: an0xxxx
+an_number: flash_example
 an_number_upper: AN0XXXX
 project: '{{an_number}}'
-title: '{{an_number_upper}}: app_note_title'
+title: '{{an_number_upper}}: Simple program that checks for the existence of flash, with IO over UART'
 version: 1.0.0
 
 documentation:
   exclude_patterns_path: doc/exclude-patterns.inc
-  root_doc: doc/rst/an0xxxx.rst
+  root_doc: doc/rst/flash_example.rst
   linkcheck_ignore_regex: [".*an0000.*"]
   cognidox_part_number: XM-000000-AN
   pdfs:
-    doc/rst/an0xxxx.rst:
+    doc/rst/flash_example.rst:
       pdf_title: '{{title}}'
       pdf_filename: '{{an_number}}_v{{version}}'
       pdf_short: yes
