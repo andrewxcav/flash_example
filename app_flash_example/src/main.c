@@ -13,7 +13,7 @@
 #define TEST_OFFSET_BYTES (0x00100000) // 1 MiB safe offset (adjust if needed)
 #define TEST_SECTOR_SIZE (4096) // 4 KiB sector
 #define TEST_LEN (256)
-
+#define UART_TX_PORT (XS1_PORT_1N)
 
 uart_tx_t *uart;
 
@@ -109,6 +109,15 @@ static void flash_test(void)
 
 int main()
 {
+    uart_tx_blocking_init(
+        uart,
+        UART_TX_PORT,
+        115200,
+        8,
+        0,
+        1,
+        0);
+
     flash_test();
     return 0;
 }
